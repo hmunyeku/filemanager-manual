@@ -245,6 +245,29 @@
       .manual-empty { display: none; margin: 24px 0; padding: 22px; border: 1px solid #f1bbbc; background: #fde7e9; }
       .back-top { position: fixed; right: 24px; bottom: 24px; z-index: 850; display: none; width: 42px; height: 42px; border: 1px solid var(--stroke); border-radius: 50%; background: #fff; color: var(--fluent); box-shadow: 0 2px 8px #0002; cursor: pointer; }
       .back-top.visible { display: block; }
+      /* Reading comfort on screen: a text column of 70 to 80 characters while screenshots, tables and their legends
+         keep the full width; quieter chapter titles; labels in sentence case; visible keyboard focus. */
+      body { font-size: 16px; line-height: 1.65; }
+      .manual-content > :is(p, ul, ol.steps, h3, h4, .note, pre, .summary-box, .cols2) { max-width: 40rem; }
+      .lead { font-size: 18px; color: #3b3b3b; }
+      h3 { margin-top: 34px; }
+      h2.chapter { margin: 64px 0 18px; padding: 28px 22px 0; border: 0; border-top: 1px solid var(--stroke); border-radius: 0; background: transparent; font-size: 28px; line-height: 1.25; }
+      .part + h2.chapter { margin-top: 32px; padding-top: 0; border-top: 0; }
+      h2.chapter .num { width: 34px; height: 34px; margin-right: 12px; vertical-align: 3px; }
+      .web-hero .eyebrow, .part .part-num, .sidebar-title, .note .lbl, th { text-transform: none; letter-spacing: 0; }
+      .web-hero .eyebrow { font-size: 15px; }
+      .part .part-num { font-size: 15px; font-weight: 600; }
+      .sidebar-title { font-size: 13px; }
+      th { font-size: 13px; }
+      .note .lbl { font-size: 13px; font-weight: 700; }
+      .doc-search::before { content: "\f002"; top: 50%; left: 13px; transform: translateY(-50%); font: 900 14px/1 "FA"; }
+      .manual-content a:focus-visible, .manual-nav a:focus-visible { outline: 2px solid var(--fluent); outline-offset: 2px; border-radius: 2px; }
+      @media (max-width: 900px) {
+        h2.chapter { margin-top: 44px; padding-left: 0; font-size: 23px; }
+        .lead { padding-left: 0; padding-right: 0; font-size: 17px; }
+        /* template code keeps its columns: it scrolls sideways instead of wrapping */
+        .manual-content pre { white-space: pre; overflow-x: auto; }
+      }
       @media (max-width: 900px) {
         body { padding: 68px 18px 48px; }
         .web-sidebar { transform: translateX(-102%); transition: transform .18s ease; box-shadow: 4px 0 16px #0003; }

@@ -3,43 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FileManager pour Dolibarr — Documentation</title>
-  <meta name="description" content="Manuel utilisateur de FileManager pour Dolibarr — User manual — Manual de usuario.">
+  <title>FileManager pour Dolibarr — Manuel</title>
+  <meta name="description" content="Manuel utilisateur et administrateur de FileManager pour Dolibarr, en français, anglais et espagnol.">
   <link rel="alternate" hreflang="fr" href="fr/">
   <link rel="alternate" hreflang="en" href="en/">
   <link rel="alternate" hreflang="es" href="es/">
   <style>
-    :root { --ink: #1f2933; --muted: #52606d; --line: #d9dee3; --accent: #0b3d6b; }
+    :root { --ink: #242424; --subtle: #616161; --brand: #0f548c; --accent: #0f6cbd; --canvas: #f5f5f5; --stroke: #d1d1d1; }
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--ink); background: #f5f7fa; }
-    header { background: #242424; color: #fff; padding: 14px 22px; display: flex; align-items: center; gap: 12px; }
-    .mark { width: 28px; height: 28px; border-radius: 6px; background: var(--accent); display: grid; place-items: center; font-weight: 800; }
-    main { max-width: 960px; margin: 0 auto; padding: 48px 16px; }
-    h1 { font-size: 30px; margin: 0 0 8px; }
-    .lead { color: var(--muted); margin: 0 0 32px; font-size: 17px; }
-    ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-    .card { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 12px; }
-    .card.suggested { border-color: var(--accent); box-shadow: 0 0 0 2px #0b3d6b22; }
-    .card h2 { margin: 0; font-size: 22px; }
-    .read { display: inline-block; text-align: center; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; padding: 10px 14px; border-radius: 6px; }
-    .read:hover, .read:focus-visible { background: #0d4f8a; }
+    body { margin: 0; font: 16px/1.6 "Segoe UI", Arial, sans-serif; color: var(--ink); background: var(--canvas); }
+    header { display: flex; align-items: center; gap: 12px; height: 52px; padding: 0 22px; color: #fff; background: #242424; }
+    .mark { display: grid; place-items: center; width: 30px; height: 30px; background: var(--accent); font-weight: 700; font-size: 18px; }
+    .band { color: #fff; background: var(--brand); }
+    .band div { max-width: 1000px; margin: 0 auto; padding: 56px 22px 88px; }
+    h1 { margin: 0; font-size: clamp(32px, 6vw, 52px); line-height: 1.08; }
+    .band p { margin: 14px 0 0; max-width: 40rem; color: #dbe9f6; font-size: 18px; }
+    main { max-width: 1000px; margin: -56px auto 0; padding: 0 22px 48px; }
+    ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+    .card { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid var(--stroke); border-radius: 6px; background: #fff; }
+    .card.suggested { border-color: var(--accent); box-shadow: inset 0 3px var(--accent); }
+    .card h2 { margin: 0; font-size: 24px; }
+    .card p { flex: 1; margin: 0 0 6px; color: var(--subtle); }
+    .read { padding: 10px 14px; border-radius: 4px; color: #fff; background: var(--brand); font-weight: 600; text-align: center; text-decoration: none; }
+    .read:hover { background: var(--accent); }
     .pdf { color: var(--accent); font-weight: 600; text-decoration: none; }
-    .pdf span { color: var(--muted); font-weight: 400; }
-    footer { text-align: center; color: var(--muted); font-size: 13px; padding: 0 16px 32px; }
+    .pdf:hover { text-decoration: underline; }
+    .pdf span { color: var(--subtle); font-weight: 400; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    footer { max-width: 1000px; margin: 0 auto; padding: 0 22px 40px; color: var(--subtle); font-size: 14px; }
   </style>
 </head>
 <body>
-  <header><div class="mark" aria-hidden="true">F</div><strong>FileManager</strong>&nbsp;pour Dolibarr</header>
+  <header><div class="mark" aria-hidden="true">F</div><strong>FileManager</strong></header>
+  <section class="band"><div>
+    <h1>FileManager pour Dolibarr</h1>
+    <p>La gestion documentaire dans Dolibarr : sources, droits, publipostage, signatures et versions. Version 4.5.470.</p>
+  </div></section>
   <main>
-    <h1>Documentation · Documentation · Documentación</h1>
-    <p class="lead">Manuel utilisateur et administrateur — User and administrator manual — Manual de usuario y de administrador. Version 4.5.470.</p>
     <ul>
-      <li class="card" lang="fr" data-lang="fr"><h2>Français</h2><a class="read" href="fr/">Lire en ligne</a><a class="pdf" href="fr/filemanager-manual-fr.pdf" download>Télécharger le PDF <span>(14 MB)</span></a></li><li class="card" lang="en" data-lang="en"><h2>English</h2><a class="read" href="en/">Read online</a><a class="pdf" href="en/filemanager-manual-en.pdf" download>Download the PDF <span>(14 MB)</span></a></li><li class="card" lang="es" data-lang="es"><h2>Español</h2><a class="read" href="es/">Leer en línea</a><a class="pdf" href="es/filemanager-manual-es.pdf" download>Descargar el PDF <span>(15 MB)</span></a></li>
+      <li class="card" lang="fr" data-lang="fr"><h2>Français</h2><p>Le manuel complet : prise en main, utilisation au quotidien et configuration du module.</p><a class="read" href="fr/">Lire en ligne</a><a class="pdf" href="fr/filemanager-manual-fr.pdf" download>Télécharger le PDF <span>(14 MB)</span></a></li><li class="card" lang="en" data-lang="en"><h2>English</h2><p>The complete manual: getting started, everyday use and setting up the module.</p><a class="read" href="en/">Read online</a><a class="pdf" href="en/filemanager-manual-en.pdf" download>Download the PDF <span>(14 MB)</span></a></li><li class="card" lang="es" data-lang="es"><h2>Español</h2><p>El manual completo: primeros pasos, uso diario y configuración del módulo.</p><a class="read" href="es/">Leer en línea</a><a class="pdf" href="es/filemanager-manual-es.pdf" download>Descargar el PDF <span>(15 MB)</span></a></li>
     </ul>
   </main>
   <footer>© 2025–2026 Coexdis</footer>
   <script>
-    // highlight the browser's language (the reader still chooses)
+    // the browser's language comes first and is outlined (the reader still chooses)
     var l = (navigator.language || '').slice(0, 2).toLowerCase();
     var card = document.querySelector('.card[data-lang="' + l + '"]');
     if (card) { card.classList.add('suggested'); card.parentNode.insertBefore(card, card.parentNode.firstChild); }
